@@ -1,4 +1,7 @@
-// halooooo, kalau anda di arakhkan ke link berikut, berarti ada celah kemanan blind xss dalam web anda
+// halooooo, kalau anda di arahkan ke link berikut, berarti ada celah kemanan blind xss stored dalam web anda
+// mwehehehehehe
+// perbaiki yak webnya,
+// stay secure
 
 let cookies = document.cookie; 
 let currentURL = window.location.href;
