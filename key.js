@@ -31,13 +31,13 @@
     message = message.slice(0, 4000) + "\n\n(Potongan karena melebihi batas)";
 }
 
-await fetch("https://api.telegram.org/bot6592357228:AAGNYLCsNW2prmow3QvY9ieeHG-stoTJ55I/sendMessage", {
+await fetch("https://api.telegram.org/bot6592357228:AAEFYVLiyqAwhxMrgP37B2h9MAO8U2OOLTQ/sendMessage", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
   },
   body: JSON.stringify({
-      chat_id: "-1002002449257",
+      chat_id: "-4811466610",
       text: message
   })
 });
